@@ -13,7 +13,7 @@ const completeBtn = document.getElementById('complete-button');
 
 let countdownTitle = '';
 let countdownDate = '';
-let countdownValue = Date;
+let countdownValue = new Date();
 let countdownActive;
 let savedCountdown;
 
@@ -72,7 +72,7 @@ function updateCountdown(e){
     // Check for valid date / if no date entered
     if (countdownDate === ''){
         alert('PLEASE SELECT A DATE FOR THE COUNTDOWN!!');
-    } else {
+    } else { 
         // Get number version of current Date, updateDOM
         countdownValue = new Date(countdownDate).getTime();
         updateDOM();
